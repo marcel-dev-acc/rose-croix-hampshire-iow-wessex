@@ -19,6 +19,8 @@ import UsefulLinks from "./pages/UsefulLinks";
 import ContactUs from "./pages/ContactUs";
 import DataProtection from "./pages/DataProtection";
 
+const basename = "/rose-croix-hampshire-iow-wessex/";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -44,4 +46,6 @@ export const router = createBrowserRouter([
       { path: "data-protection", element: <DataProtection /> },
     ],
   },
-]);
+], {
+  basename,
+});

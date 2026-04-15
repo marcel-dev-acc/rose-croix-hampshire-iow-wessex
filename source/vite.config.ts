@@ -17,9 +17,8 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-  // Use relative asset paths so production builds work on GitHub Pages
-  // project sites (e.g. /<repo>/) and avoid MIME errors from 404 HTML.
-  base: './',
+  // GitHub Pages project-site base path.
+  base: '/rose-croix-hampshire-iow-wessex/',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
