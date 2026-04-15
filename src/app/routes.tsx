@@ -19,7 +19,7 @@ import UsefulLinks from "./pages/UsefulLinks";
 import ContactUs from "./pages/ContactUs";
 import DataProtection from "./pages/DataProtection";
 
-const basename = "/rose-croix-hampshire-iow-wessex/";
+const basename = "/";
 
 export const router = createBrowserRouter([
   {
