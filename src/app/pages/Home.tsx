@@ -15,7 +15,7 @@ export default function Home() {
       <div className="flex flex-col md:flex-row gap-6 mb-6">
         <div className="md:w-64 flex-shrink-0">
           <img
-            src="/src/imports/Screenshot_2026-04-14_at_09.46.59.png"
+            src="/src/imports/IG.jpg"
             alt="Paul Hillyard 33°"
             className="w-full h-auto border-4 border-[#C9A961]/20"
           />

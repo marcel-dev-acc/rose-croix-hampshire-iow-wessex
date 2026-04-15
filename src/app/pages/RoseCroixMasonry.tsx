@@ -9,7 +9,7 @@ export default function RoseCroixMasonry() {
         <div className="md:w-64 flex-shrink-0">
           <div className="bg-white border-4 border-[#C9A961]/20 p-4">
             <img
-              src="/src/imports/Screenshot_2026-04-14_at_10.05.47.png"
+              src="/src/imports/DukeStreet-218x300.jpg"
               alt="10 Duke Street, St. James's, London"
               className="w-full h-auto"
             />
