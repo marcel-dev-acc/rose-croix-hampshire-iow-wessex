@@ -104,7 +104,7 @@ All content extracted from React components and converted to pure HTML:
 
 ### Phase 8: Assets & Optimization
 - ✓ Copy image assets from `/src/imports/` to `/assets/images/` (completed: `IG.jpg`, `DukeStreet-218x300.jpg`)
-- ✗ Font setup from `/src/styles/fonts.css`
+- ✓ Font setup from `/src/styles/fonts.css` (migrated to `assets/css/styles.css` via Google Fonts `@import`)
 - ✗ Minification and optimization
 - ✗ Performance optimization
 
