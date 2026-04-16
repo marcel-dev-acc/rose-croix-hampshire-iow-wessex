@@ -251,6 +251,37 @@
                                 United Grand Lodge of England website or contact your local Masonic Hall.
                             </p>
                         </div>
+
+                        <form class="contact-form" data-contact-form novalidate>
+                            <p class="mb-4 leading-relaxed">
+                                You can draft your inquiry below. This form provides on-page validation only.
+                            </p>
+
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label for="contact-name">Full name</label>
+                                    <input id="contact-name" name="name" type="text" autocomplete="name" required>
+                                    <p class="form-error" data-error-for="name" aria-live="polite"></p>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="contact-email">Email address</label>
+                                    <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                                    <p class="form-error" data-error-for="email" aria-live="polite"></p>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="contact-message">Message</label>
+                                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                                    <p class="form-error" data-error-for="message" aria-live="polite"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="button-primary">Validate message</button>
+                                <p class="form-feedback" data-form-feedback aria-live="polite"></p>
+                            </div>
+                        </form>
                     </section>
                 </div>
             </div>
@@ -272,6 +303,7 @@
             </div>
         </footer>
     </div>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>
