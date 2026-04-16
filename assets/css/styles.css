@@ -29,6 +29,13 @@ body {
     color: #111827;
 }
 
+header nav ul,
+header nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 img,
 svg {
     max-width: 100%;
