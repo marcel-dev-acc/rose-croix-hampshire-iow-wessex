@@ -36,6 +36,14 @@ header nav li {
     padding: 0;
 }
 
+header nav>div>ul>li>a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    line-height: 1.25rem;
+}
+
 img,
 svg {
     max-width: 100%;
