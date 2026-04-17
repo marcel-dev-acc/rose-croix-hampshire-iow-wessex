@@ -41,6 +41,14 @@ export function initNavigation() {
                 return;
             }
 
+            if (!triggerLink.querySelector(':scope > .rc-nav-link-chevron')) {
+                const chevron = document.createElement('i');
+                chevron.className = 'rc-nav-link-chevron';
+                chevron.setAttribute('data-lucide', 'chevron-down');
+                chevron.setAttribute('aria-hidden', 'true');
+                triggerLink.appendChild(chevron);
+            }
+
             const submenuId = `rc-submenu-${navIndex}-${groupIndex}`;
             submenu.id = submenuId;
 

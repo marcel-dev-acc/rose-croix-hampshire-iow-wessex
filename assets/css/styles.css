@@ -19,6 +19,7 @@
 html,
 body {
     height: 100%;
+    font-size: 1.25rem;
     font-family: 'Crimson Text', serif;
 }
 
@@ -44,9 +45,30 @@ header nav>div>ul>li>a {
     line-height: 1.25rem;
 }
 
+header nav li.group>a .rc-nav-link-chevron {
+    width: 0.9em;
+    height: 0.9em;
+    margin-left: 0.15rem;
+    transform: translateY(1px);
+    transition: transform 0.2s ease;
+}
+
+header nav li.group:hover>a .rc-nav-link-chevron,
+header nav li.group:focus-within>a .rc-nav-link-chevron,
+header nav li.group.is-open>a .rc-nav-link-chevron {
+    transform: translateY(1px) rotate(180deg);
+}
+
 img,
 svg {
     max-width: 100%;
+}
+
+.lucide {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: text-bottom;
 }
 
 .min-h-screen {
@@ -274,11 +296,11 @@ svg {
 }
 
 .text-sm {
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 
 .text-xs {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
 }
 
 .text-5xl {
@@ -795,11 +817,24 @@ a:hover {
     display: none;
 }
 
+.nav-enhanced .rc-submenu-toggle span {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.nav-enhanced li.group.is-open>.rc-submenu-toggle span {
+    transform: rotate(180deg);
+}
+
 .nav-enhanced li.group.is-open>ul {
     display: block !important;
 }
 
 @media (max-width: 900px) {
+    header nav li.group>a .rc-nav-link-chevron {
+        display: none;
+    }
+
     .nav-enhanced .rc-nav-toggle {
         display: inline-flex;
         align-items: center;
