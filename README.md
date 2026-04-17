@@ -1,11 +1,27 @@
+# Rose Croix Hampshire / IoW Wessex (Static Site)
 
-  # Homepage Recreation
+This repository now contains a **static multi-page website** built with:
 
-  This is a code bundle for Homepage Recreation. The original project is available at https://www.figma.com/design/2DXn9o2lmDAReFtAmeUKI8/Homepage-Recreation.
+- HTML
+- CSS
+- Vanilla JavaScript
 
-  ## Running the code
+The previous React/Vite application has been decommissioned and removed.
 
-  Run `npm i` to install the dependencies.
+## Project structure
 
-  Run `npm run dev` to start the development server.
-  
+- Root HTML pages (for example Home, Events, Contact, District pages)
+- [about-the-order/](about-the-order/) subpages
+- [assets/css/styles.css](assets/css/styles.css)
+- [assets/js/main.js](assets/js/main.js) and supporting modules
+
+## Running locally
+
+No build step or package install is required.
+
+Open [index.html](index.html) directly in a browser, or serve the folder with any static file server.
+
+## Notes
+
+- Navigation, dropdowns, mobile menu, form validation, and lazy-loading are implemented in vanilla JavaScript.
+- Styling is in [assets/css/styles.css](assets/css/styles.css).
