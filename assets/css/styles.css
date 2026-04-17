@@ -457,8 +457,16 @@ svg {
     background-color: #6b1a1a;
 }
 
+.hover\:bg-\[\#C9A961\]:hover {
+    background-color: #C9A961;
+}
+
 .hover\:text-\[\#E8D4A0\]:hover {
     color: #E8D4A0;
+}
+
+.hover\:text-\[\#1a1a1a\]:hover {
+    color: #1a1a1a;
 }
 
 .transition-colors {
