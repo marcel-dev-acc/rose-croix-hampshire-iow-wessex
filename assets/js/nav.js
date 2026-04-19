@@ -21,7 +21,14 @@ export function initNavigation() {
         menuToggle.className = 'rc-nav-toggle';
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.setAttribute('aria-controls', `rc-nav-list-${navIndex}`);
-        menuToggle.textContent = 'Menu';
+        menuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+
+        const hamburgerIcon = document.createElement('i');
+        hamburgerIcon.setAttribute('data-lucide', 'menu');
+        hamburgerIcon.setAttribute('aria-hidden', 'true');
+        hamburgerIcon.setAttribute('width', '36');
+        hamburgerIcon.setAttribute('height', '36');
+        menuToggle.appendChild(hamburgerIcon);
 
         navList.id = `rc-nav-list-${navIndex}`;
         navContainer.insertBefore(menuToggle, navList);

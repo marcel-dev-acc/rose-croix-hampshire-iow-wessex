@@ -1,6 +1,19 @@
 /* Rose Croix static site stylesheet */
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
+/* Emblem sizing: half size on mobile, full size on md+ */
+.rc-emblem {
+    width: 9rem;
+    height: 9rem;
+}
+
+@media (min-width: 768px) {
+    .rc-emblem {
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
 :root {
     --rc-bg: #f5f5f0;
     --rc-maroon: #6b1a1a;
@@ -617,6 +630,10 @@ svg {
         display: none;
     }
 
+    .md\:p-8 {
+        padding: 2rem;
+    }
+
     .md\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -811,14 +828,27 @@ a:hover {
 /* JavaScript-enhanced navigation */
 .nav-enhanced .rc-nav-toggle {
     display: none;
-    background: #6b1a1a;
+    background: transparent;
     color: #fff;
-    border: 1px solid rgba(201, 169, 97, 0.4);
-    border-radius: 0.25rem;
-    padding: 0.6rem 0.9rem;
-    margin: 0.75rem 0;
-    font-size: 0.875rem;
+    border: none;
+    padding: 0.5rem 0.75rem;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.nav-enhanced .rc-nav-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-enhanced .rc-nav-toggle i {
+    display: block;
+}
+
+.nav-enhanced .rc-nav-toggle .lucide {
+    width: 2em;
+    height: 2em;
 }
 
 .nav-enhanced .rc-submenu-toggle {
@@ -847,6 +877,8 @@ a:hover {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        margin: 0;
+        padding: 0.75rem 1rem;
     }
 
     .nav-enhanced .js-nav-list {
@@ -856,7 +888,10 @@ a:hover {
         justify-content: flex-start;
         gap: 0;
         width: 100%;
-        padding-bottom: 0.75rem;
+        padding: 0;
+        background-color: #2a2a2a;
+        max-height: 70vh;
+        overflow-y: auto;
     }
 
     .nav-enhanced .js-nav-list.is-open {
@@ -873,26 +908,36 @@ a:hover {
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        padding: 0.875rem 1rem;
+        color: #fff;
     }
 
     .nav-enhanced .rc-submenu-toggle {
+        display: none;
+    }
+
+    .nav-enhanced .rc-submenu-toggle span {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
-        background: #2a2a2a;
-        color: #fff;
-        border: 0;
-        border-top: 1px solid rgba(201, 169, 97, 0.15);
-        padding: 0.45rem 0.75rem;
-        cursor: pointer;
     }
 
     .nav-enhanced .group>ul {
+        display: block !important;
         position: static;
         min-width: 100%;
         box-shadow: none;
-        border-top: 1px solid rgba(201, 169, 97, 0.15);
+        border: none;
+        background: #1a1a1a;
+    }
+
+    .nav-enhanced .group>ul>li {
+        border-top: 1px solid rgba(201, 169, 97, 0.1);
+    }
+
+    .nav-enhanced .group>ul>li>a {
+        padding-left: 2rem;
+        font-size: 0.95rem;
     }
 }
 
@@ -923,6 +968,9 @@ a:hover {
 
 .form-field input,
 .form-field textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     border: 1px solid #d1d5db;
     border-radius: 0.25rem;
     padding: 0.55rem 0.65rem;
