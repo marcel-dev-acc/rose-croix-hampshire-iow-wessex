@@ -18,19 +18,21 @@ export function initContactForm() {
         submitBtn.textContent = 'Sending...'
 
         try {
-            const response = await fetch('https://example.com/form', {
+            const response = await fetch('https://your-worker.your-subdomain.workers.dev', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             })
 
-            if (response.ok) {
-                feedback.textContent = 'Your inquiry has been sent successfully.'
-                feedback.style.color = '#2e7d32'
-                form.reset()
-            } else {
-                throw new Error('Server responded with ' + response.status)
+            const result = await response.json()
+
+            if (!response.ok || result.ok === false) {
+                throw new Error(result.error || 'Server responded with ' + response.status)
             }
+
+            feedback.textContent = 'Your inquiry has been sent successfully.'
+            feedback.style.color = '#2e7d32'
+            form.reset()
         } catch (error) {
             feedback.textContent = 'Failed to send inquiry. Please try again.'
             feedback.style.color = '#c62828'
